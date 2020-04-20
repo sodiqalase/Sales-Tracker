@@ -1,0 +1,550 @@
+@import basic-formating
+@import variables
+html, body 
+  
+  font-family: 'Light', sans-serif
+body
+  // background: hsl(0,4,99)
+  background: $pg
+
+
+@font-face 
+  font-family: 'Light'
+  src: url('../../fonts/FoundersGrotesk-Regular.woff2') format("woff2")
+  font-weight: bold
+  font-style: normal
+
+@font-face 
+  font-family: 'Header'
+  src: url('../../fonts/UniviaPro-Regular.woff') format("woff")
+  font-weight: bold
+  font-style: normal
+
+
+.container
+  max-width: 1024px
+  margin: 0 auto
+
+
+
+input[type='text'],input[type='number']
+  padding: 8px 12px
+  border-radius: 3px
+  
+  border: 1px solid $g4
+  color: $g5
+  width: 100%
+  background: $pg
+
+input[type='text']:focus, input[type='number']:focus
+  outline: 1px solid $pgb
+
+input[type='submit']
+  background: $pgb
+  outline: none
+  border: none
+  cursor: pointer
+  border-radius: 5px
+  padding: 9px 12px
+  color: $w
+  font-weight: bold
+  // box-shadow: $bs-inner, $bs-inner2
+  box-shadow: $bs2
+  width: 100%
+  &:hover
+    background: rgba(48, 200, 214, .9)
+
+// Navigation styling
+.navigation
+  background: $w
+  z-index: 99
+  color: $t5
+  font-weight: normal
+  padding: 10px 0
+  box-shadow: $bs2
+  position: sticky
+  top: 0
+  right: 0
+  left: 0
+  .container
+    display: flex
+    .home-link
+      align-self: center
+      h1
+        font-size: 16px
+        color: $pgb
+        font-family: 'Header', sans-serif
+    .clear-all
+      margin-left: auto
+      background: transparent
+      outline: none
+      border: 1px solid $pgb
+      border-radius: 5px
+      padding: 8px 12px
+      color: $pgb
+      font-family: 'Light', sans-serif
+      font-weight: bold
+      // box-shadow: $bs-inner, $bs-inner2
+      &:hover
+        background: $pgb 
+        color: $w
+
+
+// Hero section styling
+
+.hero-section
+  margin-top: 10px
+  position: relative
+  height: 65vh
+  // background: $g1
+  background: url('../../img/hanson-lu-sq5P00L7lXc-unsplash.jpg') no-repeat center center/cover 
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    // background: hsla(0,0,0,.5)
+    background: rgba(48, 200, 214, .75)
+    z-index: 2
+    height: 100%
+    width: 100%
+    
+
+  .container
+    height: 100%
+    
+    .flex-control
+      height: 100%
+      display: flex
+      justify-content: center
+      // align-items: center
+      .content-wrapper
+        position: relative
+        z-index: 3
+        top: 25%
+        
+       
+        h1
+          margin-bottom: 15px
+          font-size: 2.7rem
+          font-family: 'Header', sans-serif
+          line-height: 1.2
+          text-align: center
+          color: $w
+        p
+          text-align: center
+          color: $w
+          width: 75%
+          font-family: 'Light', sans-serif
+          margin: 0 auto
+          line-height: 1.5
+          font-size: 1.4rem
+
+// calories display styling
+.calories-section
+  margin-top: 30px
+  .container
+    .total-calories
+      text-align: center
+      font-family: 'Header', sans-serif
+      color: $pt
+      .calories-content
+        color: $pgb
+
+// form styling
+.container
+  .app-form
+    border-top: 4px solid $pgb
+    background: $w
+    max-width: 800px
+    margin: 0 auto
+    
+    margin-top: 30px
+    // box-shadow: 0 0 3px 1px hsla(0,0,0,0.1)
+    box-shadow: $pgs,$pgs
+    border-radius: 5px
+    
+    padding: 40px 30px
+    
+    form
+      width: 100%
+      display: flex
+      justify-content: flex-start
+      background: $w
+      padding: 0px 0px
+      padding-bottom: 0
+      margin: 0 auto
+    
+      
+      .form-group
+        flex: 3
+        margin-right: 10px
+      .submit
+        flex: 1
+
+    .edit-buttons
+      display: flex
+      justify-content: space-between
+      margin-top: 20px
+      
+      button
+        display: block
+        flex-basis: 30%
+        padding: 5px 0
+        background: $g3
+        border: 1px solid $g2
+        border-radius: 5px
+        box-shadow: $bs2
+      .save
+        background: rgb(48, 200, 214)
+        border: none
+        font-weight: bold
+        color: $w  
+        // box-shadow: $bs-inner, $bs-inner2
+        &:hover
+          background: rgba(48, 200, 214, .8)
+      .delete
+        background: $r4
+        border: none
+        color: $w 
+        font-weight: bold
+        // box-shadow: $bs-inner, $bs-inner2
+        &:hover
+          background: $r3
+      .back
+        background: $g4
+        border: none
+        font-weight: bold
+        color: $w 
+        // box-shadow: $bs-inner, $bs-inner2
+        &:hover
+          background: $g3
+
+  // list section
+.container
+  .output
+    background: $w
+    max-width: 700px
+    margin: 0 auto
+    margin-top: 40px
+    // border: 1px solid $g3
+    box-shadow: $pgs, $pgs
+    border-radius: 4px
+    color: $g6
+    .output-item
+      position: relative
+      display: flex
+      padding: 7px 15px
+      flex-basis: 40%
+      border-bottom: 1px solid $g1
+      color: $g5
+      &:first-child
+        background: $g1
+        color: $pt
+        .item-edit
+          color: none
+          background: none
+          .item
+            color: none
+      .calorie-item
+        flex-basis: 30%
+        color: $pgb
+        
+      .meal-item
+        flex-basis: 50%
+        
+      .item-edit
+        flex-basis: 40px
+        margin-left: auto
+        .item
+          background: $r1
+          padding: 3px 8px
+          color: $r5
+          outline: none
+          border-radius: 4px
+          border: none
+          &:hover
+            background: $r2
+            color: $w
+            
+          
+
+
+
+.footer
+  margin-top: 70px
+  padding: 10px 0
+  background: $pt
+  font-size: 16px
+  color: $w
+  .container
+    .footer-content
+      text-align: center
+
+// @media (min-width: 1201px) 
+//   // .container 
+//   //   max-width: 1024px
+//   //   margin: 0 auto
+//   button
+//     font-weight: bold
+    
+    
+
+@media (max-width: 1200px)
+  .content-header
+    font-size: 2.1rem !important
+  .content-paragraph
+    font-size: 1rem !important
+  .container
+    max-width: 900px
+    margin: 0 auto
+  button
+    font-weight: bold
+    color: $g7
+
+@media (max-width: 800px)
+  .container
+    max-width: 621px
+    margin: 0 auto
+    
+  input[type='text'],input[type='number']
+    margin-bottom: 10px
+    width: 100%
+  
+  .app-form
+    max-width: 80%
+    margin: 0 auto
+    margin-top: 20px
+    .container
+      form
+        display: block
+        width: 90%
+        .submit
+          input
+            display: block
+            width: 100%
+      .edit-buttons
+        max-width: 90%
+        margin: 0 auto
+        margin-top: 20px
+        display: flex
+        justify-content: space-between
+        button
+          display: block
+          flex-basis: 30%
+          color: $g7
+          font-weight: bold
+        
+     
+  
+@media (max-width: 620px)
+  .total-calories
+    font-size: 19px !important
+  .hero-section
+    height: 50vh !important
+  .content-header
+    font-size: 1.8rem !important
+  .content-paragraph
+    font-size: .8rem !important
+    line-height: 1.7 !important
+    width: 80% !important
+  .container
+    padding: 0 2rem 
+    
+  input[type='text'],input[type='number']
+    margin-bottom: 10px
+    width: 100%
+  
+  .container-1
+    .app-form
+      max-width: 100%
+      margin: 0 auto
+      margin-top: 20px    
+      form
+        display: block
+        width: 100%
+        .form-group
+          margin-right: 0
+            
+        .submit
+          input
+            display: block
+            width: 100%
+      .edit-buttons
+        max-width: 100%
+        margin-top: 10px
+        display: flex
+        justify-content: space-between
+        button
+          display: block
+          font-size: 10px
+          font-weight: bold
+          flex-basis: 30%
+          color: $g7
+
+  .container-2
+    .output
+      margin: 0 auto
+      margin-top: 20px
+      max-width: 100%
+      
+      border: 1px solid $g3
+      border-radius: 4px
+      color: $g6
+      .output-item
+        display: block
+        padding: 7px 15px
+        flex-basis: 40%
+        border-bottom: 1px solid $g1
+        color: $g5
+        &:first-child
+          text-align: center
+          
+        .calorie-item
+          padding: 0 0
+          
+        .meal-item
+          padding: 0 0
+        .item-edit
+          
+          // width: 100%
+          position: absolute
+          right: 5%
+          top: 50%
+          
+          text-align: center
+          .item
+            padding-top: 5px
+            padding-bottom: 5px
+            background: $pk1
+            // width: 100%
+            color: $pk6
+            border-radius: 4px
+            border: none
+          .empty
+            padding: 0
+
+
+ 
+@media (max-width: 500px)
+  .clear-all
+    
+    padding: 6px 10px !important
+  .output-item
+    display: flex
+    padding: 7px 15px
+    flex-basis: 40%
+    border-bottom: 1px solid $g1
+    color: $g5
+    &:first-child
+      background: $g1
+      color: $pt
+      .item-edit
+        display: none !important
+  .form-group
+    margin-bottom: 5px !important
+  .content-header
+    font-size: 1.5rem !important
+  .content-paragraph
+    font-size: 15px !important
+    line-height: 1.7 !important
+    width: 90% !important
+  .container
+    padding: 0 1.65rem 
+  .container-1
+    padding: 0 20px
+    
+  input[type='text'],input[type='number']
+    margin-bottom: 10px
+    width: 100%
+
+  .hero-section
+    height: 65vh !important
+    
+    .container
+      height: 100%
+      .flex-control
+        height: 100%
+        display: flex
+        justify-content: center
+        // align-items: center
+        .content-wrapper
+          padding: 0 
+          h1
+            margin-bottom: 10px
+            font-size: 1.5rem
+            text-align: center
+            
+          p
+            text-align: center
+            
+            font-size: .8rem
+
+  .container
+    .app-form
+      max-width: 100%
+      margin: 0 auto
+      margin-top: 20px    
+      form
+        display: block
+        width: 100%
+        .form-group
+          margin-right: 0
+        .submit
+          input
+            display: block
+            width: 100%
+      .edit-buttons
+        max-width: 100%
+        margin-top: 10px
+        display: flex
+        justify-content: space-between
+        button
+          display: block
+          font-size: 10px
+          font-weight: bold
+          flex-basis: 30%
+          color: $g7
+
+  .container
+    .output
+      margin: 0 auto
+      margin-top: 20px
+      max-width: 100%
+      
+      border: 1px solid $g3
+      border-radius: 4px
+      color: $g6
+      .output-item
+        display: block
+        padding: 7px 15px
+        flex-basis: 40%
+        border-bottom: 1px solid $g1
+        color: $g5
+        &:first-child
+          text-align: center
+          
+        .calorie-item
+          padding: 0 0
+          
+        .meal-item
+          padding: 0 0
+        .item-edit
+          
+          // width: 100%
+          
+          text-align: center
+          .item
+            padding-top: 5px
+            padding-bottom: 5px
+            background: $r1
+            // width: 100%
+            color: $r5
+            border-radius: 4px
+            border: none
+          .empty
+            padding: 0
+
+
+@media (max-width: 390px)
+  .content-wrapper
+    top: 25% !important

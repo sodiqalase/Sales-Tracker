@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./dist/css/app.css">
+  <title>Sales Tracker App</title>
+</head>
+<body>
+  <nav class="navigation">
+    <div class="container">
+      <a href="" class="home-link">
+        <h1>Sales Tracker</h1>
+      </a>
+      <button class="clear-all">Clear All</button>
+    </div>
+  </nav>
+  <section class="hero-section">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="flex-control">
+        <div class="content-wrapper">
+          <h1 class="content-header">Manage, Organize and Update your Sales Record in a Timely Manner</h1>
+          <p class="content-paragraph">Sales tracker is an application that provides you with the means to keep track of all your transactions in a timely manner. Start using our app and bid farewell to sloppy book keeping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- calories display section -->
+  <div class="calories-section">
+    <div class="container">
+      <h2 class="total-calories">Total Sales: <span class="calories-content">1000</span></h2>
+    </div>
+  </div>
+  <!-- form section -->
+
+  <section class="container-1 container">
+    <div class="app-form">
+      <form >
+        <div class="form-group">
+          <input type="text" name="meal-name" id="meal-name" class="name-input" placeholder="Enter Item Name">
+        </div>
+        <div class="form-group">
+            <input type="number" name="calories" id="calories" class="calories-input" placeholder="Enter Price">
+        </div>
+        <div class="submit">
+          <input class= 'submit-input' type="submit" value="Add To List">
+        </div>
+      </form>
+      <div class="edit-buttons">
+        <button class="save">Save Changes</button>
+        <button class="delete">Delete</button>
+        <button class="back">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- list section -->
+  <section class="container-2 container">
+    <div class="output">
+      <li class="output-item">
+        <div class="meal-item">Item Name</div>
+        <div class="calorie-item">Price ($)</div>
+        <div class="item-edit">
+          <button class="item empty"></button>
+        </div>
+      </li>
+      <!-- <li class="output-item">
+        <div class="meal-item">rice</div>
+        <div class="calorie-item">1000</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">Noodles</div>
+        <div class="calorie-item">550</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">Yam</div>
+        <div class="calorie-item">2000</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">Pizza</div>
+        <div class="calorie-item">1100</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">chicken and Chips</div>
+        <div class="calorie-item">1500</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">rice</div>
+        <div class="calorie-item">1000</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">Noodles</div>
+        <div class="calorie-item">550</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">Yam</div>
+        <div class="calorie-item">2000</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">Pizza</div>
+        <div class="calorie-item">1100</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li>
+      <li class="output-item">
+        <div class="meal-item">chicken and Chips</div>
+        <div class="calorie-item">1500</div>
+        <div class="item-edit">
+          <button class="item">Edit</button>
+        </div>
+      </li> -->
+    </div>
+  </section>
+  
+  <!-- footer section -->
+  <footer class="footer">
+    <div class="container">
+      <h4 class="footer-content">Created by Alase Sodiq &copy;<span class="year"></span></h4>
+    </div>
+  </footer>
+
+
+
+
+  <script src="./dist/js/app.js"></script>
+</body>
+</html>
